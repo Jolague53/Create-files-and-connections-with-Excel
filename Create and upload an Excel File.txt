@@ -1,0 +1,21 @@
+Sub CREATE_AND_UPLOAD()
+
+
+
+'between quotation marks must insert the path or link of the destination address. After "&" you must put the format (.xlsx) in this example and other endings
+
+
+Workbooks.Add.SaveAs Filename:= _
+        "https://sharepoint.com/sites/sites/Shared Documents/Name of folder/Name of document" & Format(Now(), "YYYYMMDD") & ".xlsx" _
+        , FileFormat:=xlOpenXMLWorkbook, CreateBackup:=False
+       
+       ActiveWorkbook.Close
+
+
+
+
+End Sub
+
+
+
+
